@@ -1,0 +1,21 @@
+# embedded python runtime
+runtime/
+
+# build artifacts
+build/
+dist/
+*.spec
+NetHackConverter.exe
+
+# models (download via scripts or release)
+models/
+
+# test & output media
+test_assets/
+output/
+
+# runtime data
+library/
+uploads/
+__pycache__/
+*.pyc

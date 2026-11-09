@@ -1,0 +1,64 @@
+# NetHack vision parameters
+# profile: game = WD2 authentic (dark navy / red hackable / white text)
+#          neon = fluorescent cyan style
+profile: game
+
+proc_width: 960
+proc_height: 540
+out_width: 1280
+out_height: 720
+
+# detection / tracking (shared)
+detect_every: 1
+detect_conf: 0.25
+nms_iou: 0.45
+detect_input: 640
+track_iou: 0.30
+track_max_miss: 30
+ema_old: 0.75
+fade_in_ms: 150
+
+# WD2 authentic profile
+game:
+  demo_policy: alternate   # alternate | all_blue | all_red (demo stand-in for real auth)
+  label_on: true           # 目标旁的中文信息标注牌
+  gamma: 1.30
+  highlight_clip: 0.90
+  canny_lo: 60
+  canny_hi: 140
+  canny_hi2_lo: 150
+  canny_hi2_hi: 220
+  edge_alpha: 0.45
+  edge_hi_alpha: 0.70
+  dash_px: 4
+  dash_gap: 6
+  dash_speed: 30
+  vignette: 0.30
+  noise_sigma: 5
+
+# fluorescent profile
+neon:
+  gamma: 0.95
+  highlight_clip: 0.85
+  base_alpha: 0.75
+  base_darken: 0.85
+  shift_b: 12
+  shift_g: 4
+  shift_r: -8
+  canny_lo: 40
+  canny_hi: 110
+  canny_hi2_lo: 120
+  canny_hi2_hi: 200
+  edge_alpha: 0.50
+  edge_hi_alpha: 0.90
+  edge_glow: 0.18
+  node_link_k: 2
+  dash_px: 6
+  dash_gap: 6
+  dash_speed: 40
+  vignette: 0.35
+  scanline: 0.30
+  scan_band_period: 8.0
+  noise_sigma: 4
+  grid_step: 60
+  chroma_px: 2
